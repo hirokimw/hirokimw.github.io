@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>自己紹介ページ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f8ff;
+      padding: 50px;
+    }
+    h1 {
+      color: #3333cc;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #3333cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #5555ee;
+    }
+  </style>
+</head>
+<body>
+  <h1>こんにちは！</h1>
+  <img src="photo.jpg" width="200">
+  <p id="intro">これは自己紹介ページです。</p>
+  <button onclick="changeText()">文章を変える</button>
+
+  <script>
+    function changeText() {
+      document.getElementById("intro").textContent =
+        "ボタンを押して文章が変わりました！";
+    }
+  </script>
+</body>
+</html>
