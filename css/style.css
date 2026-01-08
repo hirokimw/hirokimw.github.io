@@ -97,3 +97,55 @@ p {
   display: none; /* 最初は非表示 */
   border-radius: 8px;
 }
+
+/* ----------------------------
+   レスポンシブ対応
+---------------------------- */
+
+/* 画面幅が768px以下（タブレット・スマホ向け） */
+@media screen and (max-width: 768px) {
+
+  /* ナビのリンクを縦並びに */
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  /* セクションの文字サイズを少し小さく */
+  section {
+    padding: 40px 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  /* ギャラリー画像を幅100%で縦に並べる */
+  .gallery-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-container img {
+    width: 90%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  /* スライドショー画像を幅100%に調整 */
+  .slideshow-container {
+    max-width: 100%;
+  }
+
+  .slide {
+    width: 100%;
+  }
+}
