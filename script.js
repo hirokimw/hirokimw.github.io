@@ -1,3 +1,5 @@
+alert("JavaScript 読み込み成功");
+
 let slideIndex = 0;
 const slides = document.querySelectorAll(".slide");
 
