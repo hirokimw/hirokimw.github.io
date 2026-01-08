@@ -149,3 +149,43 @@ p {
     width: 100%;
   }
 }
+
+/* ----------------------------
+   ハンバーガーメニュー
+---------------------------- */
+
+.menu-btn {
+  display: none; /* PCでは非表示 */
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+/* スマホ用 */
+@media screen and (max-width: 768px) {
+
+  .menu-btn {
+    display: block; /* スマホでは表示 */
+  }
+
+  .nav-links {
+    display: none; /* 初期状態は隠す */
+    flex-direction: column;
+    background-color: black;
+  }
+
+  .nav-links a {
+    padding: 15px;
+    border-top: 1px solid #444;
+  }
+
+  .nav-links.active {
+    display: flex; /* 開いたとき */
+  }
+}
+
