@@ -8,80 +8,15 @@
 <body>
 
 <nav>
-  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <button id="menu-btn">☰</button>
 
-  <div class="nav-links" id="navLinks">
+  <div id="menu">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </div>
 </nav>
 
-<header>
-  <button id="menu-btn">☰</button>
-
-  <nav id="menu">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
-</header>
-
-
-
-<!-- ボタン -->
-<button onclick="changeColors()">色を変える</button>
-
-<!-- セクション -->
-<section id="section1">
-  <h1 id="message">ここが変わります</h1>
-  <p>セクション1の内容です。</p>
-</section>
-
-<section id="section2">
-  <h2>セクション2</h2>
-  <p>ここも自由に文章を書けます。</p>
-</section>
-
-<section id="section3">
-  <h2>セクション3</h2>
-  <p>画像やリンクもここに置けます。</p>
-</section>
-
-<section id="gallery">
-  <h2>ギャラリー</h2>
-  <div class="gallery-container">
-    <img src="images/photo.jpg" alt="私">
-    <img src="images/img2.jpg" alt="画像2">
-    <img src="images/img3.jpg" alt="画像3">
-    <img src="images/img4.jpg" alt="画像4">
-    <img src="images/img5.jpg" alt="画像5">
-
-  </div>
-</section>
-
-<section id="slideshow">
-  <h2>スライドショー</h2>
-  <div class="slideshow-container">
-    <img src="images/photo.jpg" class="slide" alt="画像1">
-    <img src="images/img2.jpg" class="slide" alt="画像2">
-    <img src="images/img3.jpg" class="slide" alt="画像3">
-  </div>
-  <button onclick="prevSlide()">前へ</button>
-  <button onclick="nextSlide()">次へ</button>
-</section>
-
 <script src="js/script.js"></script>
 </body>
-<script>
-  document.getElementById("menu-btn").addEventListener("click", function () {
-    document.getElementById("menu").classList.toggle("open");
-  });
-</script>
-
-<script src="script.js"></script>
-</body>
-</html>
-
 </html>
