@@ -1,19 +1,3 @@
-const navColors = ["black", "darkred", "darkblue", "darkgreen"];
-const textColors = ["black", "red", "blue", "green"];
-const messages = ["ここが変わります", "変わりました！", "さらに変化！", "最高潮！"];
-let index = 0;
-
-function changeColors() {
-  const nav = document.getElementById("mainNav");
-  const msg = document.getElementById("message");
-
-  nav.style.backgroundColor = navColors[index];
-  msg.style.color = textColors[index];
-  msg.textContent = messages[index];
-
-  index = (index + 1) % navColors.length;
-}
-
 let slideIndex = 0;
 const slides = document.querySelectorAll(".slide");
 
@@ -36,3 +20,7 @@ function prevSlide() {
 // 最初のスライドを表示
 showSlide(slideIndex);
 
+// ✅ 自動切替（3秒ごと）
+setInterval(() => {
+  nextSlide();
+}, 3000);
