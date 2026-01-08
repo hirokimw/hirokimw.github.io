@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>トップページ</title>
@@ -33,6 +34,35 @@
   </style>
 </head>
 <body>
+<nav>
+  <a href="index.html" class="active">ホーム</a>
+  <a href="about.html">紹介</a>
+  <a href="contact.html">お問い合わせ</a>
+
+<button onclick="changeMessage()">クリックしてください</button>
+
+<p id="message" style="color:black;">ここが変わります</p>
+
+<script>
+  let changed = false;
+
+  function changeMessage() {
+    const msg = document.getElementById("message");
+
+    if (changed) {
+      msg.textContent = "ここが変わります";
+      msg.style.color = "black";
+      changed = false;
+    } else {
+      msg.textContent = "変わりました！";
+      msg.style.color = "red";
+      changed = true;
+    }
+  }
+</script>
+
+</nav>
+
   <h1>こんにちは！</h1>
   <img src="photo.jpg" width="200">
   <p id="intro">これは自己紹介ページです。</p>
