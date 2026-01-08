@@ -154,43 +154,27 @@ p {
    ハンバーガーメニュー
 ---------------------------- */
 
-.#menu-btn {
-  display: block; /* PCでは非表示 */
+#menu-btn {
+  display: none;            /* PCでは非表示 */
+  position: absolute;       /* navの中で配置 */
+  top: 15px;
+  left: 20px;
+  font-size: 28px;
   background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;            /* navより前に出す */
+}
 
+/* スマホだけ表示 */
 @media screen and (max-width: 768px) {
   #menu-btn {
     display: block;
   }
 }
-  border: none;
-  font-size: 28px;
-  color: white;
-  cursor: pointer;
-  position: absolute;
-  left: 20px;
-  top: 15px;
-}
+
 
 /* スマホ用 */
 @media screen and (max-width: 768px) {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 
-#menu-btn {
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-}
-
-#menu-btn {
-  display: block !important;
-  position: fixed !important;
-  top: 10px !important;
-  left: 10px !important;
-  z-index: 9999 !important;
-  font-size: 40px !important;
-  color: red !important;
-  background: yellow !important;
-}
