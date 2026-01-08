@@ -1,5 +1,8 @@
-console.log("JS 読み込み成功");
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
 
-document.getElementById("menu-btn").addEventListener("click", function () {
-  alert("押された！");
+  btn.addEventListener("click", function () {
+    menu.classList.toggle("open");
+  });
 });
