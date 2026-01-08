@@ -1,20 +1,23 @@
+/* ----------------------------
+   全体設定
+---------------------------- */
 body {
   margin: 0;
-  padding-top: 70px;
+  padding-top: 70px; /* ナビ固定時に文字が隠れないように */
   font-family: sans-serif;
   background-color: #f5f5f5;
 }
 
-/* ナビ */
+/* ナビゲーション */
 nav {
   background-color: black;
-  position: fixed;
+  position: fixed; /* 画面上部に固定 */
   top: 0;
   left: 0;
   width: 100%;
   padding: 14px 0;
   text-align: center;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s; /* 色が変わる時にスムーズ */
 }
 
 nav a {
@@ -23,13 +26,14 @@ nav a {
   padding: 10px 20px;
   margin: 0 10px;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: color 0.3s; /* マウスオーバーで色変化 */
 }
 
 nav a:hover {
   color: #ffcc00;
 }
 
+/* ボタン */
 button {
   margin: 20px auto;
   display: block;
@@ -38,23 +42,58 @@ button {
   cursor: pointer;
 }
 
+/* セクション共通 */
 section {
   padding: 60px 20px;
   text-align: center;
 }
 
-#section1 {
-  background-color: #e0f7fa;
-}
-
-#section2 {
-  background-color: #fff3e0;
-}
-
-#section3 {
-  background-color: #f3e5f5;
-}
-
 h1, h2 {
   color: #333;
+}
+
+p {
+  color: #555;
+  font-size: 18px;
+}
+
+/* ----------------------------
+   ギャラリー用
+---------------------------- */
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* 画像間隔 */
+  margin: 20px 0;
+}
+
+.gallery-container img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* ----------------------------
+   スライドショー用
+---------------------------- */
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  display: none; /* 最初は非表示 */
+  border-radius: 8px;
 }
