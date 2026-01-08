@@ -30,3 +30,7 @@ function toggleMenu() {
   nav.classList.toggle("active");
 }
 
+function toggleMenu() {
+  alert("押されました！");
+}
+
