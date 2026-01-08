@@ -1,88 +1,37 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>トップページ</title>
-  <link rel="stylesheet" href="style.css">
-
-</head>
-
-  <meta charset="UTF-8">
-  <title>自己紹介ページ</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f0f8ff;
-      padding: 50px;
-    }
-    h1 {
-      color: #3333cc;
-    }
-    button {
-      padding: 10px 20px;
-      background-color: #3333cc;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #5555ee;
-    }
-  </style>
+  <title>MyWebsite</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav>
-  <a href="index.html" class="active">ホーム</a>
+
+<nav id="mainNav">
+  <a href="index.html">ホーム</a>
   <a href="about.html">紹介</a>
   <a href="contact.html">お問い合わせ</a>
-
-<button onclick="changeMessage()">クリックしてください</button>
-
-<p id="message" style="color:black;">ここが変わります</p>
-
-<script>
-  let changed = false;
-
-  function changeMessage() {
-    const msg = document.getElementById("message");
-
-    if (changed) {
-      msg.textContent = "ここが変わります";
-      msg.style.color = "black";
-      changed = false;
-    } else {
-      msg.textContent = "変わりました！";
-      msg.style.color = "red";
-      changed = true;
-    }
-  }
-</script>
-
 </nav>
 
-  <h1>こんにちは！</h1>
-  <img src="photo.jpg" width="200">
-  <p id="intro">これは自己紹介ページです。</p>
-  <button onclick="changeText()">文章を変える</button>
+<!-- ボタン -->
+<button onclick="changeColors()">色を変える</button>
 
-  <script>
-    function changeText() {
-      document.getElementById("intro").textContent =
-        "ボタンを押して文章が変わりました！";
-    }
-  </script>
-<p>
-  <a href="about.html">自己紹介ページはこちら</a>
-</p>
+<!-- セクション -->
+<section id="section1">
+  <h1 id="message">ここが変わります</h1>
+  <p>セクション1の内容です。</p>
+</section>
 
+<section id="section2">
+  <h2>セクション2</h2>
+  <p>ここも自由に文章を書けます。</p>
+</section>
+
+<section id="section3">
+  <h2>セクション3</h2>
+  <p>画像やリンクもここに置けます。</p>
+</section>
+
+<script src="js/script.js"></script>
 </body>
-<nav>
-  <a href="index.html">ホーム</a>
-  <a href="about.html">自己紹介</a>
-  <a href="hobby.html">趣味</a>
-</nav>
-
 </html>
