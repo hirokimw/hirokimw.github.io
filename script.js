@@ -32,7 +32,8 @@ function toggleMenu() {
   nav.classList.toggle("active");
 }
 
-function toggleMenu() {
-  alert("押されました！");
-}
+
+document.getElementById("menu-btn").addEventListener("click", function () {
+  document.getElementById("menu").classList.toggle("open");
+});
 
