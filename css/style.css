@@ -3,16 +3,18 @@ body {
   padding-top: 60px;
 }
 
+/* ナビ */
 nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: black;
   height: 60px;
+  background: black;
+  z-index: 100;
 }
 
-/* ボタン本体 */
+/* ハンバーガーボタン */
 #menu-btn {
   width: 30px;
   height: 22px;
@@ -39,7 +41,7 @@ nav {
 #menu-btn span:nth-child(2) { top: 9px; }
 #menu-btn span:nth-child(3) { bottom: 0; }
 
-/* ✕ 変形 */
+/* ☰ → ✕ */
 #menu-btn.active span:nth-child(1) {
   transform: rotate(45deg);
   top: 9px;
@@ -54,31 +56,30 @@ nav {
   bottom: 9px;
 }
 
-/* メニュー（スライド表示） */
+/* メニュー（上からスライド） */
 #menu {
   position: absolute;
-  top: 60px;          /* navの高さと同じ */
+  top: 60px;
   left: 0;
   width: 100%;
   background: black;
-
-  transform: translateY(-100%);
+  transform: translateY(-120%);
   transition: transform 0.3s ease;
+  z-index: 999;
 }
 
 #menu.open {
   transform: translateY(0);
 }
 
-
 #menu a {
   color: white;
   display: block;
-  padding: 10px;
+  padding: 12px;
   text-decoration: none;
 }
 
-/* スマホのみ表示 */
+/* PCでは非表示 */
 @media (min-width: 769px) {
   #menu-btn {
     display: none;
