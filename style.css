@@ -154,9 +154,15 @@ p {
    ハンバーガーメニュー
 ---------------------------- */
 
-.menu-btn {
-  display: none; /* PCでは非表示 */
+.#menu-btn {
+  display: block; /* PCでは非表示 */
   background: none;
+
+@media screen and (max-width: 768px) {
+  #menu-btn {
+    display: block;
+  }
+}
   border: none;
   font-size: 28px;
   color: white;
@@ -167,7 +173,7 @@ p {
 }
 
 /* スマホ用 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 
 #menu-btn {
   font-size: 24px;
@@ -178,3 +184,13 @@ p {
 
 }
 
+#menu-btn {
+  display: block !important;
+  position: fixed !important;
+  top: 10px !important;
+  left: 10px !important;
+  z-index: 9999 !important;
+  font-size: 40px !important;
+  color: red !important;
+  background: yellow !important;
+}
