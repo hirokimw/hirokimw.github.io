@@ -54,15 +54,22 @@ nav {
   bottom: 9px;
 }
 
-/* メニュー */
+/* メニュー（スライド表示） */
 #menu {
-  display: none;
+  position: absolute;
+  top: 60px;          /* navの高さと同じ */
+  left: 0;
+  width: 100%;
   background: black;
+
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
 }
 
 #menu.open {
-  display: block;
+  transform: translateY(0);
 }
+
 
 #menu a {
   color: white;
