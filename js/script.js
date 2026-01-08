@@ -1,3 +1,5 @@
+alert("JavaScript 読み込み成功");
+
 let slideIndex = 0;
 const slides = document.querySelectorAll(".slide");
 
@@ -24,3 +26,13 @@ showSlide(slideIndex);
 setInterval(() => {
   nextSlide();
 }, 3000);
+
+function toggleMenu() {
+  const nav = document.getElementById("navLinks");
+  nav.classList.toggle("active");
+}
+
+function toggleMenu() {
+  alert("押されました！");
+}
+
