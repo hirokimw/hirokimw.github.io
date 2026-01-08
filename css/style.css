@@ -1,60 +1,29 @@
-body {
-  margin: 0;
-  padding-top: 60px;
-  font-family: sans-serif;
-}
-
-/* ナビ全体 */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: black;
-  padding: 15px;
-}
-
-/* メニューリンク（PC） */
-#menu a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* ☰ ボタン */
 #menu-btn {
   display: none;
-  font-size: 28px;
+  width: 30px;
+  height: 22px;
   background: none;
   border: none;
-  color: white;
   position: absolute;
+  top: 12px;
   left: 15px;
-  top: 10px;
   cursor: pointer;
 }
 
-/* ===== スマホ ===== */
-@media screen and (max-width: 768px) {
+/* 三本線 */
+#menu-btn::before,
+#menu-btn::after,
+#menu-btn span {
+  content: "";
+  display: block;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+}
 
-  /* ☰ 表示 */
+/* スマホだけ表示 */
+@media screen and (max-width: 768px) {
   #menu-btn {
     display: block;
-  }
-
-  /* メニューを縦に＆非表示 */
-  #menu {
-    display: none;
-    margin-top: 40px;
-  }
-
-  #menu.open {
-    display: block;
-  }
-
-  #menu a {
-    display: block;
-    margin: 10px 0;
   }
 }
