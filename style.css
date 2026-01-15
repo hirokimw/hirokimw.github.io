@@ -1,9 +1,68 @@
-nav a.current {
-  color: #0066cc;
-  font-weight: bold;
-  border-bottom: 2px solid #0066cc;
+/* 最小共通CSS（全ページ共通） */
+:root {
+  --text: #222;
+  --muted: #666;
+  --link: #0066cc;
+  --bg: #fafafa;
+  --line: #e5e5e5;
 }
 
-nav a:hover {
-  text-decoration: underline;
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", sans-serif;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+}
+
+header, main, footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+header {
+  border-bottom: 1px solid var(--line);
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+h1 { margin: 0 0 8px; font-size: 28px; }
+h2 { margin: 24px 0 8px; font-size: 20px; }
+h3 { margin: 16px 0 6px; font-size: 16px; }
+p  { margin: 0 0 12px; color: var(--text); }
+
+a { color: var(--link); }
+a:hover { text-decoration: underline; }
+
+/* ナビ（共通） */
+nav {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+nav a.current {
+  font-weight: 700;
+  border-bottom: 2px solid var(--link);
+}
+
+/* 記事（Logなど） */
+article {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+article:last-child {
+  border-bottom: none;
 }
