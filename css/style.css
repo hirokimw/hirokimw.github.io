@@ -1,5 +1,5 @@
 nav a.current {
-  color: #0066cc;
+  color: red;
   font-weight: bold;
   border-bottom: 2px solid #0066cc;
 }
@@ -7,4 +7,3 @@ nav a.current {
 nav a:hover {
   text-decoration: underline;
 }
-
