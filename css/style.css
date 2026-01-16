@@ -138,5 +138,8 @@ main > section {
   margin-top: 48px;
 }
 
+/* Log目次を少しコンパクトに */
+main section ul { margin-top: 6px; }
+
 
 
