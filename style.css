@@ -124,4 +124,14 @@ main section article:first-of-type h3::before {
   font-weight: 700;
 }
 
+/* --- スマホ向け文字サイズ最適化 --- */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 { font-size: 24px; }
+  h2 { font-size: 18px; }
+}
+
 
