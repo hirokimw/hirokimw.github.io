@@ -104,3 +104,17 @@ article {
   padding: 16px 0;
 }
 
+/* --- Logの日付を目立たせる --- */
+article h3 {
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+article h3 {
+  margin-bottom: 8px;
+}
+
+
+
